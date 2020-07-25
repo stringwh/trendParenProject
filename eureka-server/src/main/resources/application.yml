@@ -1,0 +1,12 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false #是否把自己作为微服务注册到注册中心
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #其他微服务注册到微服务中心通过这个地址
+
+spring:
+  application:
+    name: eureka-server
